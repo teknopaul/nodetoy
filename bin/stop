@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# Stop the server
+#
+
+if [ -f /tmp/nodetoy.sock ] ; then
+	echo EXIT | nc -U /tmp/nodetoy.sock
+	if [ $? -eq 0 ] ; then
+		rm /tmp/nodetoy.sock
+	fi
+fi
+

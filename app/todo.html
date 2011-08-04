@@ -1,0 +1,51 @@
+<html id="pw-page">
+
+<head>
+
+<title>TODO</title>
+
+<!--#include virtual="/app/inc.html" -->
+<script src="/app/js/todo.js"></script>
+<script type="text/javascript">
+ 	var todo = new nt.Todo();
+	jQuery(function() {
+		todo.init();
+	});
+</script>
+<style>
+body {
+	font-size: 9pt;
+}
+.section{
+	margin-left: 5px;
+}
+.section div{
+	margin-bottom: 5px;
+}
+a.del {
+	border: 1px solid silver;
+	border-radius: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+	background : url("/app/skin/img/back-1x36.png") repeat-x 0 0 transparent;
+}
+h3 {
+    text-shadow: 1px 1px 0 #EEEEEE;
+	padding: 5px;
+	background : url("/app/skin/img/back-1x36.png") repeat-x 0 0 transparent;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="nt-messages">&nbsp;</div>
+
+<div id="pw-title">TODO Lists</div>
+
+<div id="nt-todos"></div>
+
+</body>
+
+</html>

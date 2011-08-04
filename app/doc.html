@@ -1,0 +1,89 @@
+<html id="pw-page">
+
+<head>
+
+<title>Node Toy Docs</title>
+
+<!--#include virtual="/app/inc.html" -->
+
+<script type="text/javascript">
+ 	var m3TestPage = new nt.TestPage();
+	jQuery(function() {
+		m3TestPage.init();
+	});
+</script>
+
+</head>
+
+<body id="pw-body">
+
+<!--#include virtual="/app/skin/layout-top.html" -->
+
+<div id="pw-title">Node Toy</div>
+
+<div id="pw-content">
+
+Node toy is a node server that does JSON CRUD, so you can write desktop APPs that use the browser by writing just HTML and JavaScript.
+<br/><br/>
+
+The server has no database, JSON is stored directly on the file system.
+<br/><br/>
+
+The server responds to AJAX requests containing JSON and follows <b>REST</b> principals.
+
+<h3>The Rules</h3>
+
+All requests to process JSON data must start with /data/.
+<br/><br/>
+
+If you <b>POST</b> {"userID" : 1, "Bob"}  to  /data/user/Bob.json
+<br/>
+The server will create a file called users/Bob.json in the directory configured to store data.
+<br/><br/>
+
+The JSON can be retrieved by doing a <b>GET</b> from /data/user/Bob.json
+<br/><br/>
+
+The file is deleted by sending a <b>DELETE</b> to /data/user/Bob.json.
+<br/><br/>
+
+To get a list of all the <b>*.json</b> files in a directory send a GET to the directory /data/user/.
+
+<h3>The Test Page</h3>
+If that was not simple enough already you can try it out using the test page at 
+<br/><a href="/app/test.html">/app/test.html</a> before you write any JavaScript.
+<br/>This gives you a GUI view of the requests.
+<br/><br/>
+
+The server also serves HTML, CSS, JS and images from a directory called /app/ this is where you add your front end code.
+
+<h3>Configuration</h3>
+Configuration is simple there is an XML file conf/config.xml containing a few variables including the port to listen on, the location of /app/ and the location of /data/
+<br/><br/>
+
+You can add other paramters in config if, is made available as JSON if you send a <b>GET</b> to /config/
+<br/><br/>
+
+<h3>Server Side Includes</h3>
+All HTML has SSI includes processed, although the full spec of Apache SSI is not supported, including files and variables is.
+<br/><br/>
+You can add variables to the SSI environment (Like Apache&apos;s SetEnv command) by editing the /config/ssi-environment.xml file.
+
+<h3>Security</h3>
+
+There is no security, there are no users, no logins and all files are accessible even if the files are not JSON.  
+If that bothers you, use a firewall.
+<br/><br/>
+
+If your app ever grows up to the extent that you want to publish on t'internet it you can add a security filter.
+<br/><br/>
+
+
+</div><!--pw-content-->
+
+<!--#include virtual="/app/skin/layout-bottom.html" -->
+<br/>
+</body>
+
+</html>
+

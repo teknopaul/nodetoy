@@ -1,0 +1,17 @@
+<config>
+	<!-- 
+		The port on which the HTTP server listens.
+	-->
+	<port>8023</port>
+
+	<!-- 
+		Base directory for the JavaScript files used by the GUI frontend.
+	-->
+	<basedir>../app</basedir>
+
+	<!-- 
+		Base directory for JSON files
+	-->
+	<datadir>../data</datadir>
+	
+</config>

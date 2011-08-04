@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+#
+#
+cd `dirname $0`
+cd ..
+
+npm install filter-chain
+npm install sax
+npm install dom-js

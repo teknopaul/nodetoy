@@ -1,0 +1,104 @@
+<html id="pw-page">
+
+<head>
+
+<title>Node Toy</title>
+<!--#include virtual="/app/inc.html" -->
+<script src="/app/js/jquery.jstree.js"></script>
+<script src="/app/js/nodetoy-test.js"></script>
+<script type="text/javascript">
+ 	var m3TestPage = new nt.TestPage();
+	jQuery(function() {
+		m3TestPage.init();
+	});
+	</script>
+</head>
+
+<body id="pw-body">
+<div id="container">
+	<div id="header">
+		<span class="title">Node Toy</span> 
+		<span class="m3-auth-status"></span>
+	</div>
+	<div id="content">
+		<div id="menu"><div id="pw-popup" style="display:none;position:absolute"></div>
+			<!-- main menu -->
+			<ul>
+				<li><a class="help-link" href="/app/test/index.html">
+					<span class="tooltip">
+					Use this page to test making Ajax requests to the server.
+					</span>
+					Test Page</a>
+				</li>
+				<li><a class="help-link" href="/app/doc.html">
+					<span class="tooltip">
+					Doucmentation.
+					</span>
+					Docs</a>
+				</li>
+			</ul>
+		</div>
+		<div id="main">
+
+<div id="pw-content">
+			<form id="m3-test-form" action="#" onsubmit="m3TestPage.exec(); return false;" class="ui-widget">
+			  	<div class="ui-widget ui-widget-content ui-corner-all m3-region">
+					<b>URL</b>: <input type="text" name="url" id="nt-url"/>
+					<input type="submit" value="Send request"/>
+					<img src="/app/skin/img/throbber.gif" class="m3-throbber" width="20" height="20"/>
+				</div>
+				<div class="ui-widget ui-widget-content ui-corner-all m3-region">
+					<div id="m3-request-type" class="ui-helper-hidden">
+						<input type="radio" name="httpMethod" id="m3-GET"  value="GET"/>GET<br/>
+						<input type="radio" name="httpMethod" id="m3-POST"  value="POST"/>POST<br/>
+						<input type="radio" name="httpMethod" id="m3-DELETE" value="DELETE"/>DELETE<br/>
+					</div>
+
+				</div>
+				<div class="ui-widget ui-widget-content ui-corner-all m3-region">
+					<textarea name="data" id="m3-input" cols="60" rows="5"></textarea>
+					<div style="padding-left:5px;padding-right:5px"><span class="m3-light">POST data</span>
+						<a href="#" title="hide" onclick="jQuery('#m3-parameters').hide(); return false;"><span style="float:right" class="ui-icon ui-icon-circle-triangle-n"></span></a>
+						<a href="#" title="show" onclick="jQuery('#m3-parameters').show(); return false;"><span style="float:right" class="ui-icon ui-icon-circle-triangle-s"></span></a>
+					  	<a href="#" title="clear" onclick="jQuery('#m3-input').val(''); return false;"><span style="float:right" class="ui-icon ui-icon-trash"></span></a>
+					  	<a href="#" title="reset" onclick="m3TestPage.reset(); return false;"><span style="float:right" class="ui-icon ui-icon-refresh"></span></a>
+					</div>
+				</div>
+				<div class="ui-widget ui-widget-content ui-corner-all m3-region">
+					<input type="submit" value="Send request"/>
+					<img src="/app/skin/img/throbber.gif" class="m3-throbber" width="20" height="20"/>
+					<input type="radio" name="viewType" id="m3-tree"  value="tree" checked="true"/>Tree view
+					<input type="radio" name="viewType" id="m3-print"  value="print"/>Text
+					<span id="m3-buttons" style="visibility:hidden">
+						<input type="button" id="m3-open-all" value="expand"></input>
+						<input type="button" id="m3-close-all" value="close"></input>
+						<input type="text"   id="m3-search-text" value=""></input>
+						<input type="button" id="m3-search" value="search"></input>
+					</span>
+				</div>
+				<div class="ui-widget ui-widget-content ui-corner-all m3-region">
+					<pre id="m3-output"></pre>
+					<div id="m3-js-tree-view"></div>
+				</div>
+			  </form>
+
+			<div id="m3-headers"></div>
+			
+			<div id="m3-tree-view"></div>
+
+
+
+</div><!--pw-content-->
+
+		</div>
+	</div>
+	<div id="footer">
+		nodetoy from riereta.net
+	</div>
+
+</div>
+
+</body>
+
+</html>
+

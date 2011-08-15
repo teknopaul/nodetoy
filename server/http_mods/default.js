@@ -93,9 +93,6 @@ function mimeMagicIsText(pathname) {
 	else if (pathname.lastIndexOf(".json") == pathname.length - 5) {
 		return true;
 	}
-	else {
-		return true;
-	}
 	return false;
 };
 /**

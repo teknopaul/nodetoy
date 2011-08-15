@@ -12,19 +12,26 @@ function doGet(request, response, url) {
 
 	resolve.resolveApp(url.pathname, true, function(fileSystemPath) {
 
-		// open the file
-		var instream = fs.createReadStream(fileSystemPath , { flags: 'r' });
-		
-		instream.on('error', function() {
-			// TODO this is not correct FNF should be detected some other way
-			defaults.fileNotFound(response);
-		});
-		
 		// set default HTTP headers
 		response.statusCode = 200;
 		var mime = defaults.mimeMagic(response, url.pathname);
 		response.setHeader("Content-Type", mime);
 		defaults.addNoCacheHeaders(response);
+
+		// open the file
+		var instream = null;
+		if ( defaults.mimeMagicIsText(url.pathname) ) {
+			instream = fs.createReadStream(fileSystemPath, { flags: 'r', encoding: 'utf8' });
+		} else {
+			instream = fs.createReadStream(fileSystemPath);
+		}
+		
+		instream.on('error', function() {
+			// TODO this is not correct FNF should be detected some other way
+			defaults.fileNotFound(response);
+			return;
+		});
+		
 		
 		// If it is HTML parse SSI 
 		if (mime == "text/html") {

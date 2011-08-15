@@ -74,6 +74,30 @@ function mimeMagic(response, pathname) {
 	}
 };
 
+function mimeMagicIsText(pathname) {
+	if (pathname.lastIndexOf(".html") == pathname.length - 5) {
+		return true;
+	}
+	else if (pathname.lastIndexOf(".htm") == pathname.length - 4) {
+		return true;
+	}
+	else if (pathname.lastIndexOf(".shtml") == pathname.length - 6) {
+		return true;
+	}
+	else if (pathname.lastIndexOf(".css") == pathname.length - 4) {
+		return true;
+	}
+	else if (pathname.lastIndexOf(".js") == pathname.length - 3) {
+		return true;
+	}
+	else if (pathname.lastIndexOf(".json") == pathname.length - 5) {
+		return true;
+	}
+	else {
+		return true;
+	}
+	return false;
+};
 /**
  * Return a 404
  */
@@ -111,6 +135,7 @@ exports.addDefaultHtmlHeaders = addDefaultHtmlHeaders;
 exports.addNoCacheHeaders = addNoCacheHeaders;
 exports.addCache1DayHeaders = addCache1DayHeaders;
 exports.mimeMagic = mimeMagic;
+exports.mimeMagicIsText = mimeMagicIsText;
 
 exports.fileNotFound = fileNotFound;
 exports.serverError = serverError;

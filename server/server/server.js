@@ -9,6 +9,7 @@ var FilterChain = require("filter-chain").FilterChain;
 var attributesFilter = 	require("../server/attributes-filter"),
 	logRequestFilter = 	require("../server/log-request-filter")
 	serverHeaderFilter = require("../server/server-header-filter"),
+	rewriteFilter = 	require("rewrite"),
 	routerFilter = 		require("../server/router");
 
 
@@ -16,8 +17,11 @@ var chainModules = [
 	attributesFilter, 
 	logRequestFilter, 
 	serverHeaderFilter,
+	rewriteFilter,
 	routerFilter
 ];
+
+rewriteFilter.setRules
 
 var chain = new FilterChain(chainModules);
 

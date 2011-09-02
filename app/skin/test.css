@@ -1,0 +1,67 @@
+/*
+ * CSS utils useful on any page
+ */
+ .m3-region {
+ 	position:relative;
+	padding: 5px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	background: #fff url(../img/back_white.gif) repeat-y top left;
+	border: 1px solid #ddd;
+}
+.m3-region h1,h2,h3,h4{
+}
+.m3-light {
+	color:silver;
+	font-size:0.8em;
+}
+.m3-icon-holder {
+	position:relative;
+	padding:3px;
+	padding-top:4px;
+	padding-left:17px;
+}
+.m3-icon {
+	position:absolute;
+	top:1px;
+	left:1px;
+	width:16px;
+	height:16px;
+}
+a img{
+border:0px;
+}
+table{
+border-collapse:collapse;
+}
+a.m3-help-link {
+	position:relative;
+}
+a.m3-help-link:hover{ z-index:23; color: #000}
+a.m3-help-link:hover span.m3-tooltip{
+	/* pos */
+	display:block;
+	position:absolute;
+	top:28px; left:32;
+	padding:10px;
+	/* style */
+	border: solid 2px #00c;
+	text-align: left;
+	white-space: nowrap;
+	color: #000;
+	background-color: #fff;
+	font-size: 9pt;
+	font-weight: normal;
+	text-decoration:none;
+	/* effect */
+	-moz-border-radius :8px;
+	-webkit-border-radius:8px;
+	-khtml-border-radius:8px;
+	filter: alpha(opacity:90);
+	KHTMLOpacity: 0.90;
+	MozOpacity: 0.90;
+	opacity: 0.90;
+}
+.m3-tooltip {
+	display: none;
+}

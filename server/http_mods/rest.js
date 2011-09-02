@@ -16,7 +16,6 @@ var config = 	require('../util/config.js').configData;
  * The only methods supported are GET and POST and it up to the front end to do something sensible with the data.
  */
 
-
 /**
  * Get the JSON file or if a directory is supplied list the json files.
  */

@@ -67,7 +67,7 @@ var validate = function() {
 
 fs.readFile('../conf/config.xml', function (err, data) {
 	if (err) {
-		throw err;
+		throw new Error("Could not read ../conf/config.xml");
 	}
 	parser.write(data.toString('utf8')).close();
 });

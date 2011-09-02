@@ -5,6 +5,7 @@ var defaults = require('./default');
 var resolve = require('../persistence/file-resolve');
 var ssiParser = require('../ssi/ssi-parser');
 var ssi = require('../ssi/ssi-handler');
+var cache = require('cache').forever;
 /**
  * Stream a named file to the response.
  */

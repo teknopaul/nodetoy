@@ -7,7 +7,7 @@ var defaults = require('../http_mods/default');
 
 filter = function(request, response, chain) {
 	
-	response.setHeader("Server", "rierteta.net_nodetoy/0.1");
+	response.setHeader("Server", "rierteta.org_nodetoy/0.1");
 	
 	chain.doFilter(request, response);
 };

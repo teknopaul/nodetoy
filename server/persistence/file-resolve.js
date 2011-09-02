@@ -13,7 +13,7 @@ resolveApp = function(pathname, forweb, callback) {
 	// get the real file's path avoiding ../ trickery
 	pathname = path.normalize(pathname);
 	if (pathname.indexOf('..') >= 0) {
-		throw {error : "../ trickery"};
+		throw new Error("../ trickery");
 	}
 	
 	// get base
@@ -43,7 +43,7 @@ resolveData = function(pathname, forweb, callback) {
 	// get the real file's path avoiding ../ trickery
 	pathname = path.normalize(pathname);
 	if (pathname.indexOf('..') >= 0) {
-		throw {error : "../ trickery"};
+		throw new Error("../ trickery");
 	}
 	
 	// get base
@@ -53,7 +53,7 @@ resolveData = function(pathname, forweb, callback) {
 	}
 	else {
 		console.log("Resolving missing base path " + pathname);
-		throw  {error : "Error resolving"};
+		throw new Error("Error resolving");
 	}
 	
 	// get path in the filesystem

@@ -6,7 +6,7 @@ var parse = require('url').parse;
  */
 filter = function(request, response, chain) {
 	
-	var url = parse(request.url);
+	var url = request.attributes.url;
 	console.log(request.method + " " + url.pathname);
 	
 	chain.doFilter(request, response);

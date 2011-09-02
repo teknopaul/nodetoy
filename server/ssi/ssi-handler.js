@@ -105,6 +105,7 @@ SsiHandler = function(ssiEnv, resolver) {
 	
 	/**
 	 * Return the attributes from a SSI statement.
+	 * @throws Error if the attributes do not parse correctly
 	 */
 	this._processAttributes = function(attributes) {
 		var atts = {};
@@ -119,7 +120,7 @@ SsiHandler = function(ssiEnv, resolver) {
 				inName = false;
 				while (attributes.charAt(++i) == ' '); // skip whitespace and first "
 				if (attributes.charAt(i) != '"') {
-					throw "Syntax error parsing " + attributes ;
+					throw new Error("Syntax error parsing " + attributes);
 				}
 				else {
 					inValue = true;

@@ -9,13 +9,13 @@ The server responds to AJAX requests containing JSON and follows REST principals
 
 All requests to process JSON data must start with `/data/`.
 
-If you *POST* `{"userID" : 1, "Bob"}`  to  `/data/user/Bob.json`
+If you POST `{"userID" : 1, "Bob"}`  to  `/data/user/Bob.json`
 
 The server will create a file called `users/Bob.json` in the directory configured to store data (by default, ./data).
 
-The JSON can be retrieved by doing a *GET* from `/data/user/Bob.json`
+The JSON can be retrieved by doing a GET from `/data/user/Bob.json`
 
-The file is deleted by sending a *DELETE* to `/data/user/Bob.json`.
+The file is deleted by sending a DELETE to `/data/user/Bob.json`.
 
 
 To get a list of all the `*.json` files in a directory send a GET to the directory `/data/user/`.
@@ -26,7 +26,7 @@ This gives you a GUI view of the requests.
 
 The server also serves HTML, CSS, JS and images from a directory called `/app/` this is where you add your front end code.
 
-## Configuration<
+## Configuration
 Configuration is simple, there is an XML file `conf/config.xml` containing a few variables including the port to listen on, 
 the location of `/app/` and the location of `/data/`
 

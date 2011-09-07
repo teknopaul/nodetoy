@@ -1,7 +1,9 @@
 <env>
 
+	<!-- Text for the header -->
 	<serverName> &amp;laquo; Node Toy &amp;raquo; </serverName>
 	
-	<copyRight>· &amp;laquo; &amp;copy; riereta.net - Node Toy Server - powered by node.js &amp;raquo; ·</copyRight>
+	<!-- Displayed in the footer -->
+	<copyRight>· &amp;laquo; &amp;copy; riereta.org - Node Toy Server - powered by node.js &amp;raquo; ·</copyRight>
 	
 </env>

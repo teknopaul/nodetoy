@@ -7,7 +7,7 @@
 * Copied from
 * https://github.com/polotek/morestreams/blob/mine/main.js which has no comments and I don't understand.
 * 
-* TODO this should be a better implementation of a WriteableStream, probably using Buffers and not string concatenating.
+* TODO this should be a better implementation of a WriteableStream.
 */
     
 /**

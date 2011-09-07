@@ -15,8 +15,8 @@ parser.parse(function() {
 	}
 	env.initialized = true;
 	emitter.emit('envReady');
-	console.log("SSI environment");
-	console.dir(env);
+	//console.log("SSI environment");
+	//console.dir(env);
 });
 
 /**

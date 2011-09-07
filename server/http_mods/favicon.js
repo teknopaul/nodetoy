@@ -4,7 +4,8 @@ var fs = require('fs');
 var defaults = require('./default');
 
 /**
- * Stream the favicon.ico
+ * Stream the favicon.ico,  
+ * the file /app/favicon.png is returned.
  */
 function doGet(request, response, url) {
 	

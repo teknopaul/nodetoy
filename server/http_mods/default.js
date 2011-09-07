@@ -4,12 +4,12 @@ var date = require("../util/date.js");
 var ssiUtil = require("../ssi/ssi-util.js");
 
 /**
- * Static functions for adding standard headers and standard responses.
+ * Static functions for adding HTTP headers and standard responses.
  * 
  * Also includes mime magic.
  * 
- * @param response
  */
+
 
 function addDefaultHtmlHeaders(response) {
 	response.setHeader("Content-Type", "text/html;charset=utf8");
@@ -27,6 +27,13 @@ function addCache1DayHeaders(response) {
 	response.setHeader("Expires", date.toHttpDate(expires));
 };
 
+/**
+ * Uses the file extension to guess mime type, or defaults to text/plain.
+ * 
+ * @param response Content-Type header will be set with charset
+ * @param pathname
+ * @returns {String} content type will be returned
+ */
 function mimeMagic(response, pathname) {
 	if (pathname.lastIndexOf(".html") == pathname.length - 5) {
 		response.setHeader("Content-Type", "text/html;charset=utf8");
@@ -74,6 +81,11 @@ function mimeMagic(response, pathname) {
 	}
 };
 
+/**
+ * Returns true if the file's extension is .[s]htm[l] .css .js or .json
+ * @param pathname
+ * @returns {Boolean}
+ */
 function mimeMagicIsText(pathname) {
 	if (pathname.lastIndexOf(".html") == pathname.length - 5) {
 		return true;
@@ -96,7 +108,8 @@ function mimeMagicIsText(pathname) {
 	return false;
 };
 /**
- * Return a 404
+ * Return a 404 this processes the /app/404.html file including SSI.
+ * 
  */
 function fileNotFound(response) {
 	response.writeHead(404, "NOT FOUND", {'Content-Type': 'text/html' });

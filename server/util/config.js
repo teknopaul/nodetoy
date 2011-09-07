@@ -1,5 +1,5 @@
 /**
- * Configraution object loaded from XML, XML support comments config files should have comments, JSON never thought of that.
+ * Configration object loaded from XML, XML support comments, config files should have comments, JSON never thought of that.
  * 
  * file loaded is ../conf/config.xml
  * 

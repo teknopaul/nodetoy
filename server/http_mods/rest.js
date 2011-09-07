@@ -13,7 +13,7 @@ var config = 	require('../util/config.js').configData;
  * 
  * e.g.  POST /data/user/Teknopaul  with overwrite the data in a file called Teknopaul.json   
  * 
- * The only methods supported are GET and POST and it up to the front end to do something sensible with the data.
+ * The only methods supported are GET and POST and DELETE, it up to the front end to do something sensible with the data.
  */
 
 /**

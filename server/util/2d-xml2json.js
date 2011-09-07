@@ -10,7 +10,7 @@
  * 	myname : myvalue,
  * }
  * 
- * If this class is run with nexted XML elements results are unpredictable, hence "2d".
+ * If this class is run with nested XML elements results are unpredictable, hence "2d".
  * 
  */
 
@@ -21,7 +21,6 @@ var sax = require("sax"),
   parser = sax.parser(strict);
 
 /**
- * 
  * @constructor
  */
 var Parser = function(fileName) {

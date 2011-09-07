@@ -23,7 +23,7 @@
 
 <div id="pw-content">
 
-Node toy is a node server that does JSON CRUD, so you can write desktop APPs that use the browser by writing just HTML and JavaScript.
+Node toy is a server that does JSON CRUD, so you can write desktop APPs that use the browser by writing just HTML and JavaScript.
 <br/><br/>
 
 The server has no database, JSON is stored directly on the file system.
@@ -33,21 +33,21 @@ The server responds to AJAX requests containing JSON and follows <b>REST</b> pri
 
 <h3>The Rules</h3>
 
-All requests to process JSON data must start with /data/.
+All requests to process JSON data must start with <code>/data/</code>.
 <br/><br/>
 
-If you <b>POST</b> {"userID" : 1, "Bob"}  to  /data/user/Bob.json
+If you <b>POST</b> <code>{"userID" : 1, "Bob"}</code>  to  <code>/data/user/Bob.json</code>
 <br/>
-The server will create a file called users/Bob.json in the directory configured to store data.
+The server will create a file called <code>users/Bob.json</code> in the directory configured to store data (by default, ./data).
 <br/><br/>
 
-The JSON can be retrieved by doing a <b>GET</b> from /data/user/Bob.json
+The JSON can be retrieved by doing a <b>GET</b> from <code>/data/user/Bob.json</code>
 <br/><br/>
 
-The file is deleted by sending a <b>DELETE</b> to /data/user/Bob.json.
+The file is deleted by sending a <b>DELETE</b> to <code>/data/user/Bob.json</code>.
 <br/><br/>
 
-To get a list of all the <b>*.json</b> files in a directory send a GET to the directory /data/user/.
+To get a list of all the <b>*.json</b> files in a directory send a GET to the directory <code>/data/user/</code>.
 
 <h3>The Test Page</h3>
 If that was not simple enough already you can try it out using the test page at 
@@ -55,19 +55,21 @@ If that was not simple enough already you can try it out using the test page at
 <br/>This gives you a GUI view of the requests.
 <br/><br/>
 
-The server also serves HTML, CSS, JS and images from a directory called /app/ this is where you add your front end code.
+The server also serves HTML, CSS, JS and images from a directory called <code>/app/</code> this is where you add your front end code.
 
 <h3>Configuration</h3>
-Configuration is simple there is an XML file conf/config.xml containing a few variables including the port to listen on, the location of /app/ and the location of /data/
+Configuration is simple, there is an XML file conf/config.xml containing a few variables including the port to listen on, 
+the location of /app/ and the location of /data/
 <br/><br/>
 
-You can add other paramters in config if, is made available as JSON if you send a <b>GET</b> to /config/
+You can add other parameters in the config file, the whole file config it is made available as JSON if you send a <b>GET</b> to /config/
 <br/><br/>
 
 <h3>Server Side Includes</h3>
 All HTML has SSI includes processed, although the full spec of Apache SSI is not supported, including files and variables is.
 <br/><br/>
-You can add variables to the SSI environment (Like Apache&apos;s SetEnv command) by editing the /config/ssi-environment.xml file.
+
+You can add variables to the SSI environment (Like Apache&apos;s SetEnv command) by editing the <code>/config/ssi-environment.xml</code> file.
 
 <h3>Security</h3>
 
@@ -78,6 +80,10 @@ If that bothers you, use a firewall.
 If your app ever grows up to the extent that you want to publish on t'internet it you can add a security filter.
 <br/><br/>
 
+
+<h3>Example</h3>
+At <a href="/app/todo.html">/app/todo.html</a> there is a simple browser app designed for the FireFox sidebar as an example. 
+<br/><br/>
 
 </div><!--pw-content-->
 

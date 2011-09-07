@@ -30,3 +30,5 @@ var statusSocket = net.createServer(function (c) {
 	}
 });
 statusSocket.listen("/tmp/nodetoy.sock");
+
+console.log("Listening to /tmp/nodetoy.sock");

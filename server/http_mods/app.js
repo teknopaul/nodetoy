@@ -5,9 +5,13 @@ var defaults = require('./default');
 var resolve = require('../persistence/file-resolve');
 var ssiParser = require('../ssi/ssi-parser');
 var ssi = require('../ssi/ssi-handler');
-var cache = require('cache').forever;
+
 /**
  * Stream a named file to the response.
+ * Also parses SSI if the data is HTML.
+ * 
+ * This is the modeul that streamns the client side APP to the browser, it is pretty much a simple
+ * Apache with SSI.
  */
 function doGet(request, response, url) {
 

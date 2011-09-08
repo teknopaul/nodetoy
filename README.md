@@ -1,3 +1,4 @@
+![nodetoy](http://code.abnoctus.com/nodetoy-128x128.png)
 
 Node toy is a server that does JSON CRUD, so you can write desktop APPs that use the browser by writing just HTML and JavaScript.
 

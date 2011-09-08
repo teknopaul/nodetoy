@@ -109,12 +109,13 @@ body#pw-body {
 	-webkit-border-radius: 8px;
 	-khtml-border-radius: 8px;	
 }
-#content{
+#content {
+	background: url("img/nodetoy-background.png") no-repeat  #FFFFFF;
+	background-position: 30px 40px;
 	position:relative;
 	min-height:450px;
 	/*tthis empty border is an IE hack ?! !WFT */
 	border: solid 1px white;
-	background: #fff;
 }
 
 table.frame{
@@ -124,7 +125,7 @@ table.frame td{
 	margin:0px;padding:0px;border:0px;
 }
 
-/* header is the blue top bar */
+/* header is the top bar */
 #header{
 	background: url(img/back-1x36.png) repeat-x 0 0;
 	border :1px solid; border-color : #efefef #bbb #bbb #efefef;

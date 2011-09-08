@@ -7,13 +7,24 @@ var config = 	require('../util/config.js').configData;
 
 
 /**
- * This is a simple JSON REST service that allows reading and writing using AJAX requests.
+ * TODO Mimic the nodetoy bare REST interface and back with a couchdb database.
  * 
- * The path must have a context root of /data/, but after that any path is valid, and any item name follows the same rules as page names.
+ * implement POST
+ * to save any JSON after adding an path that is similar to nodetoy 
+ *		path : /data/foo/bar/myFile.json
+ *
+ * Create a View that maps
+ * function(doc){
+ *   emit(doc.path, doc.id)
+ * }  
  * 
- * e.g.  POST /data/user/Teknopaul  with overwrite the data in a file called Teknopaul.json   
+ * implement GET
+ * by searching in node usin gthe above view and then getById with the ID returned.
+ * Stream the whole JSON object inc _id and path to make it obvious these names are reserved
  * 
- * The only methods supported are GET and POST and DELETE, it up to the front end to do something sensible with the data.
+ * implement DELETE
+ * 
+ * 
  */
 
 /**

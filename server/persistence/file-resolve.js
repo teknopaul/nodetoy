@@ -3,6 +3,9 @@ var fs = require('fs');
 
 var config = require('../util/config').configData;
 
+// docs are shite on this attribute, win32 is observed win64 is guesswork
+var windowsHacks = (process.platform == 'win32' || process.platform == 'win64');
+
 /**
  * resolves HTML o CSS files
  */
@@ -14,6 +17,10 @@ resolveApp = function(pathname, forweb, callback) {
 	pathname = path.normalize(pathname);
 	if (pathname.indexOf('..') >= 0) {
 		throw new Error("../ trickery");
+	}
+	
+	if (windowsHacks) {
+		pathname = pathname.replace(/\\/g, '/');
 	}
 	
 	// get base
@@ -45,7 +52,11 @@ resolveData = function(pathname, forweb, callback) {
 	if (pathname.indexOf('..') >= 0) {
 		throw new Error("../ trickery");
 	}
-	
+
+	if (windowsHacks) {
+		pathname = pathname.replace(/\\/g, '/');
+	}
+
 	// get base
 	if (pathname.indexOf('/data/') == 0) {
 		basedir = config.datadir;

@@ -1,5 +1,6 @@
 
 var parse = require('url').parse;
+var resolveObject = require('url').resolveObject;
 
 var config = require('../util/config').configData;
 
@@ -13,12 +14,13 @@ var appModule = 		require('../http_mods/app');
 /**
  * Router routes requests to the correct module.
  * It parses the URI and calls doGet or doPost of the modules.
- * TODO revers the roles modules should determine their own URI.
+ * TODO reverse the roles modules should determine their own URI.
  */
 route = function(request, response, chain) {
 	try {
 		
 		var url = parse(request.url, true);
+		url = resolveObject(url, url); // strange syntax (url passed twice) but this resolves ../../ paths in the URL
 		
 		if (url.pathname.indexOf('/data/') == 0) {
 			service(restModule, request, response, url);

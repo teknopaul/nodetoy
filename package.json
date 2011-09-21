@@ -1,0 +1,19 @@
+{
+  "name": "nodetoy",
+  "version": "1.0.0",
+  "description" : "A REST/JSON backend",
+  "dependencies": {
+  	"sax" :			">=0.1.5",
+  	"dom-js" :		">=0.0.3",
+  	"filter-chain" :">=1.0.1",
+  	"nodeunit" :	">=0.5.3",
+  	"rewrite" :		">=0.0.1"
+  },
+  "directories": {
+    
+  },
+  "main": "./server/start",
+  "engines": {
+    "node": "*"
+  }
+}

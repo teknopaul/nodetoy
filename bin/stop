@@ -1,6 +1,8 @@
 #!/bin/bash
 #
-# Stop the server
+# Stop the server 
+#
+# N.B. requires the proper netcat, not the debian one
 #
 
 if [ -f /tmp/nodetoy.sock ] ; then

@@ -10,8 +10,6 @@ resolveApp = function(pathname, forweb, callback) {
 
 	//console.log("Resolving " + pathname);
 	
-	// get the real file's path avoiding ../ trickery
-	pathname = path.normalize(pathname);
 	if (pathname.indexOf('..') >= 0) {
 		throw new Error("../ trickery");
 	}
@@ -40,12 +38,10 @@ resolveApp = function(pathname, forweb, callback) {
  */
 resolveData = function(pathname, forweb, callback) {
 
-	// get the real file's path avoiding ../ trickery
-	pathname = path.normalize(pathname);
 	if (pathname.indexOf('..') >= 0) {
 		throw new Error("../ trickery");
 	}
-	
+
 	// get base
 	if (pathname.indexOf('/data/') == 0) {
 		basedir = config.datadir;

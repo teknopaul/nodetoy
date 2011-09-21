@@ -15,7 +15,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="toy_fine.svg">
+   sodipodi:docname="toy_fine.svg"
+   inkscape:export-filename="/home/teknopaul/Pictures/nodetoy.png"
+   inkscape:export-xdpi="105.59345"
+   inkscape:export-ydpi="105.59345">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -23,17 +26,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
+     inkscape:zoom="0.7"
      inkscape:cx="425.87339"
-     inkscape:cy="661.7799"
+     inkscape:cy="547.49419"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1016"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="1324"
+     inkscape:window-height="955"
+     inkscape:window-x="377"
+     inkscape:window-y="36"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true" />
   <defs
      id="defs4">
     <linearGradient
@@ -165,6 +170,14 @@
        x2="185.95921"
        y2="707.74634"
        gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:collect="always"
+       id="filter4591">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.8249222"
+         id="feGaussianBlur4593" />
+    </filter>
   </defs>
   <metadata
      id="metadata7">
@@ -182,6 +195,24 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:56.02838135px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#9d9d9d;fill-opacity:1;stroke:none;filter:url(#filter4591);font-family:Sans"
+       x="59.546661"
+       y="834.12512"
+       id="text4557-5"
+       sodipodi:linespacing="125%"
+       transform="matrix(1.0228268,0,0,1.0228268,-1.1924306,-17.664846)"><tspan
+         sodipodi:role="line"
+         id="tspan4559-3"
+         x="59.546661"
+         y="834.12512"
+         style="font-size:67.23406219px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#9d9d9d;fill-opacity:1;font-family:Droid Serif;-inkscape-font-specification:Droid Serif">nodetoy</tspan><tspan
+         sodipodi:role="line"
+         x="59.546661"
+         y="918.16772"
+         style="font-size:67.23406219px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#9d9d9d;fill-opacity:1;font-family:Droid Serif;-inkscape-font-specification:Droid Serif"
+         id="tspan4561-1">an instant backend</tspan></text>
     <path
        style="opacity:0.25;fill:#000000;stroke:none;filter:url(#filter4149)"
        d="m 261.92177,424.61951 133.34014,-18.18275 -107.07618,-31.31473 -79.80204,5.05076 z"
@@ -324,5 +355,22 @@
        d="m 696.04174,377.40486 -252.12498,22.09375 7.75,297.46875 238.71878,-30.8125 5.6562,-288.75 z m -21.8125,48.8125 -1.8437,15.625 -4.875,0.59375 c -2.1694,0.26033 -4.0853,0.82426 -5.75,1.6875 -1.5821,0.85372 -3.1929,2.22531 -4.8126,4.125 -1.5356,1.88907 -3.2199,4.4113 -5.0624,7.5625 -1.7575,3.13798 -3.9182,7.11703 -6.4376,11.9375 l -53.4374,100.28125 -3.8438,37.84375 c -0.4069,4.008 -0.3521,7.07405 0.1562,9.1875 0.5074,2.11052 1.3034,3.65137 2.4063,4.625 1.1828,0.96094 2.5905,1.43923 4.1875,1.46875 1.6768,0.0177 3.4917,-0.0929 5.4375,-0.375 l 12.25,-1.78125 -1.5625,14.34375 -92.49998,13.59375 1.21875,-14.5 11.93745,-1.71875 c 2.0667,-0.29962 3.961,-0.70079 5.7188,-1.21875 1.8396,-0.52962 3.4909,-1.43008 4.9062,-2.6875 1.4235,-1.34656 2.5876,-3.19798 3.5313,-5.53125 1.0271,-2.34739 1.7135,-5.43542 2.0625,-9.28125 l 3.5312,-38.65625 -39.7812,-96.4375 c -1.07782,-2.7546 -2.15662,-5.10214 -3.21875,-7 -0.97645,-1.91074 -2.12918,-3.37062 -3.4375,-4.375 -1.3023,-1.10287 -2.83065,-1.82047 -4.625,-2.1875 -1.70824,-0.37741 -3.89939,-0.40919 -6.53125,-0.0937 l -3.53125,0.4375 1.15625,-15.96875 89.56248,-10.53125 -1.5,15.78125 -4.5,0.53125 c -5.3182,0.63793 -9.427,2.34452 -12.31248,5.09375 -2.7982,2.7379 -4.3844,6.15462 -4.75,10.21875 -0.2261,2.51188 -0.0645,5.20277 0.4375,8.09375 0.595,2.77956 1.2952,5.35341 2.0938,7.71875 l 15.31238,40.25 c 2.1002,5.71351 3.7495,10.77241 4.9688,15.1875 1.2988,4.39114 2.4288,8.71126 3.4062,12.9375 2.2385,-5.2026 4.7615,-10.8744 7.5938,-17 2.9316,-6.24418 6.1606,-12.75447 9.6562,-19.5625 l 18.5626,-36.53125 c 2.3013,-4.5091 3.8452,-8.23076 4.6562,-11.15625 0.9061,-3.03499 1.4496,-5.37117 1.625,-7 0.5471,-5.08622 -0.4728,-8.62649 -3.0938,-10.59375 -2.5422,-1.98102 -6.7063,-2.62831 -12.4687,-1.9375 l -6,0.71875 1.625,-15.75 67.875,-7.96875 z"
        id="path2987-1"
        inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:57.30733109px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="57.012615"
+       y="834.03278"
+       id="text4557"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4559"
+         x="57.012615"
+         y="834.03278"
+         style="font-size:68.76880646px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Droid Serif;-inkscape-font-specification:Droid Serif">nodetoy</tspan><tspan
+         sodipodi:role="line"
+         x="57.012615"
+         y="919.99377"
+         style="font-size:68.76880646px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Droid Serif;-inkscape-font-specification:Droid Serif"
+         id="tspan4561">an instant backend</tspan></text>
   </g>
 </svg>

@@ -49,3 +49,7 @@ If your app ever grows up to the extent that you want to publish on t'internet i
 
 ## Example
 At `/app/todo.html` there is a simple TODO list app for the FireFox sidebar as an example. 
+
+## Download
+You can run from source or download a tar here
+[code.abnoctus.com downloads](http://code.abnoctus.com/publish/binaries/nodetoy/)

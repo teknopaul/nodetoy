@@ -8,9 +8,12 @@ var ssi = require('../ssi/ssi-handler');
 
 /**
  * Stream a named file to the response.
- * Also parses SSI if the data is HTML.
  * 
- * This is the modeul that streamns the client side APP to the browser, it is pretty much a simple
+ * Parses SSI if the data is HTML, also handles some mime types such as CSS and PNG.
+ * 
+ * To support more mime types modify mimeMagic() in defaults.js
+ * 
+ * This is the module that streams the client side APP to the browser, it is pretty much a simple
  * Apache with SSI.
  */
 function doGet(request, response, url) {

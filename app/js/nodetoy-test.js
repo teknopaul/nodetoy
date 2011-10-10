@@ -31,7 +31,8 @@ nt.TestPage.prototype.init = function() {
 	});
 	jQuery('#m3-search').click(function(){
 		self.search();
-	});	
+	});
+	this.createMemoryButtons();
 }
 nt.TestPage.prototype.reset = function() {
 	if (! this.api) return;
@@ -267,6 +268,43 @@ nt.TestPage.prototype.printHeaders = function(req) {
 	} catch(err) {
 		dom.text('Headers not available:' + err);
 	}
+};
+
+// Storage
+nt.TestPage.prototype.memoryPlus = function(index) {
+	var method = jQuery('#m3-test-form')[0].httpMethod;
+	var toSave = {
+		url : jQuery('#nt-url').val(),
+		method : method[0].checked ? 0 : (method[1].checked ? 1 : 3),
+		json : jQuery('#m3-input').val()
+	};
+	toSave = JSON.stringify(toSave);
+	localStorage.setItem('idx' + index, toSave);
+};
+nt.TestPage.prototype.memoryRecall = function(index) {
+	var saved = localStorage.getItem('idx' + index);
+	if (saved) {
+		saved = JSON.parse(saved);
+		jQuery('#nt-url').val(saved.url);
+		jQuery('#m3-test-form')[0].httpMethod[saved.method].checked = true;;
+		jQuery('#m3-input').val(saved.json);
+	}
+};
+nt.TestPage.prototype.createMemoryButtons = function() {
+	var html = new jQuery.htmlBuffer();
+	html.html('<ul id="nt-mem"><li>Memory</li>');
+
+	html.html('<li>&nbsp;1: <a onclick="m3TestPage.memoryPlus(0)">M+</a> ');
+	html.html('<a onclick="m3TestPage.memoryRecall(0)">MR</a></li>');
+
+	html.html('<li>&nbsp;2: <a onclick="m3TestPage.memoryPlus(1)">M+</a> ');
+	html.html('<a onclick="m3TestPage.memoryRecall(1)">MR</a></li>');
+
+	html.html('<li>&nbsp;3: <a onclick="m3TestPage.memoryPlus(2)">M+</a> ');
+	html.html('<a onclick="m3TestPage.memoryRecall(2)">MR</a></li>');
+
+	html.html('</ul>');
+	jQuery('#menu').append(html.toString());
 };
 
 //utils

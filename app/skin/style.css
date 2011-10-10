@@ -455,3 +455,11 @@ div#pw-content samp {
 	-webkit-border-radius:8px;
 	-khtml-border-radius:8px;	
 }
+#nt-mem li a {
+	cursor: pointer;
+	border: 1px solid #333;
+	border-radius: 4px;
+	padding: 0px 2px 0px 2px;
+	background-color: #eee;
+	box-shadow: 0px 0px 1px #999;
+}

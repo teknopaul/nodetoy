@@ -14,6 +14,7 @@ var appModule = 		require('../http_mods/app');
 /**
  * Router routes requests to the correct module.
  * It parses the URI and calls doGet or doPost of the modules.
+ * 
  * TODO reverse the roles modules should determine their own URI.
  */
 route = function(request, response, chain) {

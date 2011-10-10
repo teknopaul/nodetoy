@@ -7,28 +7,7 @@ var config = 	require('../util/config.js').configData;
 
 
 /**
- * TODO Mimic the nodetoy bare REST interface and back with a couchdb database.
- * 
- * implement POST
- * to save any JSON after adding an path that is similar to nodetoy 
- *		path : /data/foo/bar/myFile.json
- *
- * Create a View that maps
- * function(doc){
- *   emit(doc.path, doc.id)
- * }  
- * 
- * implement GET
- * by searching in node usin gthe above view and then getById with the ID returned.
- * Stream the whole JSON object inc _id and path to make it obvious these names are reserved
- * 
- * implement DELETE
- * 
- * 
- */
-
-/**
- * Get the JSON file or if a directory is supplied list the json files.
+ * Get the JSON file or, if a directory is supplied, list the json files in the directory.
  */
 doGet = function(request, response, url) {
 	
@@ -99,7 +78,9 @@ doGet = function(request, response, url) {
 };
 
 /**
- * Create / Update
+ * Create / Update a JSON file
+ * 
+ * This method parses and pretty prints the JSON it receives, it would be faster to remove this feature
  */
 doPost = function(request, response, url) {
 	

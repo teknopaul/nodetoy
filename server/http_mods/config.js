@@ -6,8 +6,9 @@ var defaults = 	require('./default');
 var config = 	require('../util/config.js').configData;
 
 /**
- * Return the configuration files as JSON to the front end, 
- * everyone in browser land love JSON.
+ * Return the XML configuration files as JSON to the front end, 
+ * everyone in browser land loves JSON.
+ * 
  * N.B. this means you can not put sensitive data in the config.
  */
 function doGet(request, response, url) {

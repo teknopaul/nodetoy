@@ -32,6 +32,9 @@ nt.TestPage.prototype.init = function() {
 	jQuery('#m3-search').click(function(){
 		self.search();
 	});
+	jQuery('input[type=radio]').click(function(){
+		self.warning('');
+	});
 	this.createMemoryButtons();
 }
 nt.TestPage.prototype.reset = function() {
@@ -61,9 +64,8 @@ nt.TestPage.prototype.exec = function() {
 			form.url.value.indexOf("/app/") != 0 
 			) {
 			
-			popup.alert("Error", "URL should start with /data/", $.callback(this, this.throbberOff));
-			
-			return;
+			this.warning("URL should probably start with /data/");
+
 		}
 		
 		var method = "GET";
@@ -78,6 +80,7 @@ nt.TestPage.prototype.exec = function() {
 			success : function(response) {
 				self.lastResponse = response;
 				self.print(response);
+				self.warning('');
 			},
 			error : function(err) {
 				self.lastResponse = null;
@@ -313,6 +316,9 @@ nt.TestPage.prototype.throbberOn = function(){
 };
 nt.TestPage.prototype.throbberOff = function(){
 	jQuery('.m3-throbber').attr('src', '/app/skin/img/blank.gif');
+};
+nt.TestPage.prototype.warning = function(message){
+	jQuery('#m3-warnings').text(message);
 };
 /**
  * replace \n and \t with HTML elements for new line and non-blanking space.

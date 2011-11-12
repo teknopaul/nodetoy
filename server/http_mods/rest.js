@@ -97,8 +97,13 @@ doPost = function(request, response, url) {
 		request.on('end', function() {
 
 			fs.mkdir(dirname, 0755, function(err) {
-
-				var safeBean = JSON.parse(buffer); // check it is valid JSON
+				var safeBean = null;
+				try {
+					safeBean = JSON.parse(buffer); // check it is valid JSON
+				} catch(ex) {
+					defaults.badRequest(response);
+					return;
+				}
 				
 				fs.writeFile(fileSystemPath, JSON.stringify(safeBean, null, '\t'), 'utf-8', function(err, data) {
 					

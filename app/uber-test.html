@@ -1,11 +1,33 @@
 <html id="pw-page">
+<!-- 
 
+This is the all-on-one-page version of the test page.
+
+Load this in the browser, right mouse click save the HTML and and drop it into what ever server you like.
+
+JavaScript and CSS are included via SSI.
+SVG images are imported as <svg> objects (not for old browsers)
+GIF and PNG images in the CSS files are imported using data:image/png;base64,wAAAPDw8IqKiuDg4EZG...
+
+TODO fix favicon
+TODO jstree tries to dynamically load the CSS even though it is already included causeing some 404's that are not really errors
+
+-->
 <head>
-
 <title>Node Toy</title>
-<!--#include virtual="/app/inc.html" -->
-<script src="/app/js/jquery.jstree.js"></script>
-<script src="/app/js/nodetoy-test.js"></script>
+<!-- link rel="SHORTCUT_ICON" href="/app/facicon.png" /-->
+<style>
+<!--#include virtual="/app/skin/uber-style.css" -->
+<!--#include virtual="/app/js/themes/uber/style.css" -->
+</style>
+<script>
+<!--#include virtual="/app/js/jquery-1.4.2.js" -->
+<!--#include virtual="/app/js/jquery.closure.js" -->
+<!--#include virtual="/app/js/jquery.htmlbuffer.js" -->
+<!--#include virtual="/app/js/popups.js" -->
+<!--#include virtual="/app/js/jquery.jstree.js" -->
+<!--#include virtual="/app/js/nodetoy-test.js" -->
+</script>
 <script type="text/javascript">
  	var m3TestPage = new nt.TestPage();
 	jQuery(function() {
@@ -17,26 +39,14 @@
 <body id="pw-body">
 <div id="container">
 	<div id="header">
+		<!--#include virtual="/app/js/themes/uber/t.svg" -->
 		<span class="title">Node Toy</span> 
 		<span class="m3-auth-status"></span>
 	</div>
 	<div id="content">
 		<div id="menu"><div id="pw-popup" style="display:none;position:absolute"></div>
 			<!-- main menu -->
-			<ul>
-				<li><a class="help-link" href="/app/test.html">
-					<span class="tooltip">
-					Use this page to test making Ajax requests to the server.
-					</span>
-					Test Page</a>
-				</li>
-				<li><a class="help-link" href="/app/doc.html">
-					<span class="tooltip">
-					Doucmentation.
-					</span>
-					Docs</a>
-				</li>
-			</ul>
+			<!--#include virtual="/app/js/themes/uber/nodetoy.svg" -->
 		</div>
 		<div id="main">
 
@@ -49,7 +59,6 @@
 				</div>
 				<div class="ui-widget ui-widget-content ui-corner-all m3-region">
 					<div id="m3-request-type" class="ui-helper-hidden">
-						<div id="m3-warnings">Select a method</div>
 						<input type="radio" name="httpMethod" id="m3-GET"  value="GET"/>GET<br/>
 						<input type="radio" name="httpMethod" id="m3-POST"  value="POST"/>POST<br/>
 						<input type="radio" name="httpMethod" id="m3-DELETE" value="DELETE"/>DELETE<br/>
@@ -98,6 +107,7 @@
 	</div>
 
 </div>
+
 
 </body>
 

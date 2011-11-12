@@ -90,7 +90,7 @@ vertical-align: middle;
 body#pw-body {
 	margin-top:15px;
 	text-align:center;
-	background: url(img/background.png) repeat-x 0 0;
+	background-color:#FAFAFA;
 }
 #container{
 
@@ -110,11 +110,11 @@ body#pw-body {
 	-khtml-border-radius: 8px;	
 }
 #content {
-	background: url("img/nodetoy-background.png") no-repeat  #FFFFFF;
+	background-color:  #fff;
 	background-position: 30px 40px;
 	position:relative;
 	min-height:450px;
-	/*tthis empty border is an IE hack ?! !WFT */
+	/* this empty border is an IE hack ?! !WFT */
 	border: solid 1px white;
 }
 
@@ -127,9 +127,12 @@ table.frame td{
 
 /* header is the top bar */
 #header{
-	background: url(img/back-1x36.png) repeat-x 0 0;
-	border :1px solid; border-color : #efefef #bbb #bbb #efefef;
-	padding-top: 7px; padding-bottom: 6px;
+background-image: -moz-linear-gradient(#ddd, #bbb);
+background-image: -webkit-linear-gradient(#ddd, #bbb);
+background-image: linear-gradient(#ddd, #bbb);
+	padding-left: 7px;
+	padding-top: 3px; 
+	padding-bottom: 0px;
 	border-radius: 8px 8px 0px 0px;
 	-moz-border-radius: 8px 8px 0px 0px;
 	-webkit-border-radius: 8px 8px 0px 0px;
@@ -137,17 +140,18 @@ table.frame td{
 }
 #header span.title {
 	vertical-align:top;
-	padding-left: 45px; /*13px;*/
+	padding-left: 5px;
 	color: #335;
 	font-weight: normal;
 	font-size:1.2em;
-	background: url(/favicon.png) no-repeat 9px 0;
-	text-shadow: 1px 1px 0 #EEEEEE;
+	text-shadow: 1px 1px 1px #eee;
 }
 
 /* footer */
 #footer{
-	background: url(img/back.png) repeat-x 0 0;
+background-image: -moz-linear-gradient(#ddd, #bbb);
+background-image: -webkit-linear-gradient(#ddd, #bbb);
+background-image: linear-gradient(#ddd, #bbb);
 	border-left: 1px solid white 
 	margin-bottom:16px;
 	color: #999;
@@ -155,7 +159,7 @@ table.frame td{
 	line-height:12px;
 	white-space:nowrap;
 	text-align:center;
-	text-shadow: 1px 1px 0 #EEEEEF;
+	text-shadow: 1px 1px 0 #eee;
 	padding-top:5px;
 	padding-bottom:5px;
 	border-radius: 0px 0px 8px 8px;
@@ -186,7 +190,7 @@ table.frame td{
 	padding-bottom: 10px;
 	
 	/*background-color: #f9f9ff;*/
-	background: url("img/background.png") repeat-x scroll 0 0 #eaeaea;
+	background-color: #eaeaea;
 	text-shadow: 1px 1px 0px #FFF;
 	
 	box-shadow: 1px 1px 3px #333;
@@ -335,7 +339,6 @@ div#pw-history-title {
 	margin-right: 10px;
 }
 .pw-css-button {
-	background: url("img/back-1x36.png") repeat-x scroll 0 0 transparent;
 	padding: 0px 5px 0px 5px;
 	border: 1px solid silver;
 	font-size: 10px;
@@ -375,9 +378,13 @@ div#pw-content samp {
 	font-size: 10pt;
 }
 #pw-popup h3 {
+	border-radius: 8px 8px 0px 0px;
+background-image: -moz-linear-gradient(#ddd, #bbb);
+background-image: -webkit-linear-gradient(#ddd, #bbb);
+background-image: linear-gradient(#ddd, #bbb);
+	text-shadow: 1px 1px 1px #eee;
 	padding : 10px;
 	padding-top : 7px;
-	background: url("img/back-1x36.png") repeat-x scroll 0 0 transparent;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	font-size: 11pt;
@@ -471,4 +478,3 @@ div#pw-content samp {
     padding-left: 10px;
     padding-right: 10px;
 }
-

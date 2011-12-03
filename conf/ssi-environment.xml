@@ -4,6 +4,6 @@
 	<serverName> &amp;laquo; Node Toy &amp;raquo; </serverName>
 	
 	<!-- Displayed in the footer -->
-	<copyRight>· &amp;laquo; &amp;copy; riereta.org - Node Toy Server - powered by node.js &amp;raquo; ·</copyRight>
+	<copyRight>· &amp;laquo; &amp;copy; Node Toy Server - powered by node.js &amp;raquo; ·</copyRight>
 	
 </env>

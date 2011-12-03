@@ -1,5 +1,5 @@
 
-
+var os = require('os');
 var twoDparser = require("../util/2d-xml2json");  
 var EventEmitter = require('events').EventEmitter;
 
@@ -13,6 +13,7 @@ parser.parse(function() {
 	for(var prop in data) {
 	    env[prop] = data[prop];
 	}
+	env.SERVER_NAME = os.hostname();
 	env.initialized = true;
 	emitter.emit('envReady');
 	//console.log("SSI environment");

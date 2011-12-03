@@ -22,6 +22,7 @@ route = function(request, response, chain) {
 		
 		var url = parse(request.url, true);
 		url = resolveObject(url, url); // strange syntax (url passed twice) but this resolves ../../ paths in the URL
+		url = parse(request.url, true);
 		
 		if (url.pathname.indexOf('/data/') == 0) {
 			service(restModule, request, response, url);

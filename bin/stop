@@ -5,7 +5,7 @@
 # N.B. requires the proper netcat, not the debian one
 #
 
-if [ -f /tmp/nodetoy.sock ] ; then
+if [ -S /tmp/nodetoy.sock ] ; then
 	echo EXIT | nc -U /tmp/nodetoy.sock
 	if [ $? -eq 0 ] ; then
 		rm /tmp/nodetoy.sock

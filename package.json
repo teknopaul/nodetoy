@@ -1,6 +1,6 @@
 {
   "name": "nodetoy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description" : "A REST/JSON backend",
   "dependencies": {
   	"sax" :			">=0.1.5",

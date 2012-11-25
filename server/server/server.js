@@ -1,4 +1,4 @@
-var sys  = require("sys");
+var sys  = require("util");
 var http = require("http");
 
 var router = require("./router");
@@ -21,7 +21,7 @@ var chainModules = [
 	routerFilter
 ];
 
-rewriteFilter.setRules
+//rewriteFilter.setRules
 
 var chain = new FilterChain(chainModules);
 

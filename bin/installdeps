@@ -8,3 +8,5 @@ cd ..
 npm install filter-chain
 npm install sax
 npm install dom-js
+npm install rewrite
+

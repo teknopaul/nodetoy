@@ -21,6 +21,7 @@ var chainModules = [
 	routerFilter
 ];
 
+// hook for adding rewrite rules @see https://github.com/teknopaul/rewrite
 //rewriteFilter.setRules
 
 var chain = new FilterChain(chainModules);

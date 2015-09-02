@@ -4,6 +4,7 @@ var fs = require('fs');
 var defaults = 	require('./default');
 var resolve = 	require('../persistence/file-resolve');
 var config = 	require('../util/config.js').configData;
+var util = 		require('../util/util.js');
 
 
 /**
@@ -96,7 +97,7 @@ doPost = function(request, response, url) {
 		
 		request.on('end', function() {
 
-			fs.mkdir(dirname, 0755, function(err) {
+			util.mkdirp(dirname, 0755, function(err) {
 				var safeBean = null;
 				try {
 					safeBean = JSON.parse(buffer); // check it is valid JSON

@@ -1,2 +1,4 @@
 node_modules
 stories
+target/
+deploy/root/

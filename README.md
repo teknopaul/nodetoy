@@ -28,7 +28,7 @@ This gives you a GUI view of the requests.
 The server also serves HTML, CSS, JS and images from a directory called `/app/` this is where you add your front end code.
 
 ## Configuration
-Configuration is simple, there is an XML file `conf/config.xml` containing a few variables including the port to listen on, 
+Configuration is simple, there is an XML file `conf/config.xml` containing a few variables including the port to listen on,
 the location of `/app/` and the location of `/data/`
 
 You can add other parameters in the config file, the whole file config it is made available as JSON if you send a GE to `/config/`
@@ -48,7 +48,10 @@ If your app ever grows up to the extent that you want to publish on t'internet i
 
 
 ## Example
-At `/app/todo.html` there is a simple TODO list app for the FireFox sidebar as an example. 
+
+At `/app/todo.html` there is a simple TODO list app for the FireFox sidebar as an example.
 
 ## Download
-You can run from source or download the zip
+
+You can run from source, download the zip, install a .deb or npm install, everything is contained in a single directory and there is no build process.
+

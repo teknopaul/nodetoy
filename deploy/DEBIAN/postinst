@@ -1,2 +1,15 @@
 #!/bin/sh
 
+#
+# Install nodejs deps with npm
+#
+cd /opt/nodetoy/bin && ./installdeps
+
+#
+# Create defauilt dir for .json data
+#
+mkdir -p /opt/nodetoy/data
+chmod 777 /opt/nodetoy/data
+
+useradd nodetoy
+chown -R nodetoy.nodetoy /opt/nodetoy

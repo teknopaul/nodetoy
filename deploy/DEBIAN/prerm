@@ -2,3 +2,6 @@
 #
 # rm all the data
 #
+cd /opt/nodetoy && rm -rf node_modules
+
+userdel nodetoy

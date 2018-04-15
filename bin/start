@@ -1,6 +1,32 @@
 #!/bin/bash
-
+#
+# Simple staret scripts requires node or nodejs (debian) on the path
+#
 cd `dirname $0`
 cd ../server
-node start
 
+#
+# Socket exisiting means the server is up or crashed/killed.
+#
+if [[ -S /tmp/nodetoy.sock ]] ; then
+	../bin/stop
+	sleep 1
+	if [[ -S /tmp/nodetoy.sock ]] ; then
+		rm /tmp/nodetoy.sock
+	fi
+fi
+
+which node
+if [ $? == 0 ] ; then
+	nohup node start &
+	exit 0
+else
+	which nodejs
+	if [ $? == 0 ] ; then
+		nohup nodejs start &
+		exit 0
+	fi
+fi
+
+echo "No node or nodejs"
+exit 1
